@@ -1,4 +1,6 @@
 module showMilhao {
+	
+	opens br.com.showmilhao.controller;
 	exports br.com.showmilhao.application;
 	
 	requires transitive javafx.controls;

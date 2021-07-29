@@ -7,13 +7,19 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
-public class Main extends Application {
+public class ApplicationShowMilhao extends Application {
 	
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	private static Stage stage;
 	private static final String FILE_MUSIC = "src/main/resources/songs/som-abertura-2.mp3";
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			stage = primaryStage;
 			primaryStage.setTitle("Show do Milhão");
 			
 			Pane telaInicial = FXMLLoader.load(getClass().getResource("/views/LayoutTelaInicial.fxml"));
@@ -39,7 +45,7 @@ public class Main extends Application {
 		}
 	}
 	
-	public static void main(String[] args) {
-		launch(args);
+	public static void changeScene(Scene scene) {
+		stage.setScene(scene);
 	}
 }
