@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 
 public class LogUtil {
 
-	//construtor private para bloquear a instanciação dessa classe....
+	//construtor private para bloquear a instanciação dessa classe.....
 	private LogUtil() { }
 	
 	
