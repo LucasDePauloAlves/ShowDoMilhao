@@ -9,12 +9,12 @@ import javafx.stage.Stage;
 
 public class ApplicationShowMilhao extends Application {
 	
+	private static Stage stage;
+	private static final String FILE_MUSIC = "src/main/resources/songs/som-abertura-2.mp3";
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
-	private static Stage stage;
-	private static final String FILE_MUSIC = "src/main/resources/songs/som-abertura-2.mp3";
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -23,7 +23,7 @@ public class ApplicationShowMilhao extends Application {
 			primaryStage.setTitle("Show do Milhão");
 			
 			Pane telaInicial = FXMLLoader.load(getClass().getResource("/views/LayoutTelaInicial.fxml"));
-			Scene scene = new Scene(telaInicial,800,600);
+			Scene scene = new Scene(telaInicial, 800, 600);
 			telaInicial.getStylesheets().add(getClass().getResource("/css/buttonStyle.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
